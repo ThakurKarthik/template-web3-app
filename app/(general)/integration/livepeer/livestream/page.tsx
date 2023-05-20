@@ -2,7 +2,7 @@
 
 import { LivepeerConfig, ThemeConfig, createReactClient, studioProvider } from '@livepeer/react'
 
-import { Stream } from '@/integrations/livepeer/components/Stream'
+import { Stream } from '@/integrations/livepeer/components/stream'
 
 const client = createReactClient({
   provider: studioProvider({ apiKey: '481df680-dda5-470a-af77-f1a66298d557' }),
@@ -21,7 +21,6 @@ const livepeerTheme: ThemeConfig = {
 export default function App() {
   return (
     <LivepeerConfig client={client} theme={livepeerTheme}>
-      {/* <Livepeer /> */}
       <Stream />
     </LivepeerConfig>
   )

@@ -1,6 +1,6 @@
-import { Player } from '@livepeer/react'
-import Image from 'next/image'
 import * as React from 'react'
+
+import { Player } from '@livepeer/react'
 
 // import waterfallsPoster from '../../public/images/waterfalls-poster.png';
 
@@ -19,7 +19,7 @@ import * as React from 'react'
 
 const playbackId = 'bafybeigtqixg4ywcem3p6sitz55wy6xvnr565s6kuwhznpwjices3mmxoe'
 
-export function Livepeer() {
+export function OnDemand() {
   return (
     <Player
       title="Waterfalls"
