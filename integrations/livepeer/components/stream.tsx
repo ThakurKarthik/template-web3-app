@@ -12,12 +12,11 @@ export const Stream = () => {
   const { mutate: createStream, data: stream, status } = useCreateStream(streamName ? { name: streamName } : null)
 
   const isLoading = useMemo(() => status === 'loading', [status])
-  console.log(stream, status)
   return (
     <div>
       <label>
         Enter a stream name
-        <Input type="text" placeholder="Stream name" onChange={(e) => setStreamName(e.target.value)} />
+        <Input style={{ margin: '10px 0px' }} type="text" placeholder="Stream name" onChange={(e) => setStreamName(e.target.value)} />
       </label>
 
       {stream?.playbackId && <Player title={stream?.name} playbackId={stream?.playbackId} autoPlay muted />}
@@ -25,6 +24,7 @@ export const Stream = () => {
       <div>
         {!stream && (
           <Button
+            style={{ margin: '10px 0px' }}
             onClick={() => {
               createStream?.()
             }}
